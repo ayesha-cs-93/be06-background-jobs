@@ -10,9 +10,15 @@ import json
 import logging
 from sqlalchemy import text
 
-from db import SessionLocal
+from db import SessionLocal, engine, Base
 from anthropic_client import call_anthropic
 from alerts import send_alert
+import models
+
+Base.metadata.create_all(bind=engine)
+
+Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("worker")
