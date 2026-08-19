@@ -1,0 +1,76 @@
+[
+  {
+    "input": {
+      "title": "A Light in the Attic",
+      "price": "£51.77",
+      "description": "It's hard to imagine a world without A Light in the Attic. This now-classic collection of poems and drawings from Shel Silverstein celebrates the whimsical and the profound.",
+      "availability": "In stock (22 available)"
+    },
+    "expected_category": "poetry"
+  },
+  {
+    "input": {
+      "title": "Sapiens: A Brief History of Humankind",
+      "price": "£54.23",
+      "description": "A groundbreaking narrative of humanity's creation and evolution that explores the ways biology and history have defined us.",
+      "availability": "In stock (18 available)"
+    },
+    "expected_category": "non_fiction"
+  },
+  {
+    "input": {
+      "title": "The Very Hungry Caterpillar",
+      "price": "£6.50",
+      "description": "A picture book for children following a caterpillar eating its way through the week.",
+      "availability": "In stock (30 available)"
+    },
+    "expected_category": "childrens"
+  },
+  {
+    "input": {
+      "title": "Steve Jobs",
+      "price": "£45.00",
+      "description": "The exclusive biography of Steve Jobs, based on more than forty interviews with Jobs conducted over two years.",
+      "availability": "In stock (5 available)"
+    },
+    "expected_category": "biography"
+  },
+  {
+    "input": {
+      "title": "The Silent Patient",
+      "price": "£15.99",
+      "description": "A woman shoots her husband five times and then never speaks another word. A psychotherapist becomes obsessed with treating her.",
+      "availability": "In stock (12 available)"
+    },
+    "expected_category": "fiction"
+  },
+  {
+    "input": {
+      "title": "Untitled Miscellany Vol. 3",
+      "price": "£0.00",
+      "description": "",
+      "availability": "In stock (1 available)"
+    },
+    "expected_category": "other",
+    "note": "ambiguous case - empty description, suspicious price, should trigger when-unsure rule"
+  },
+  {
+    "input": {
+      "title": "X",
+      "price": "£999.99",
+      "description": "N/A",
+      "availability": "Availability unknown"
+    },
+    "expected_category": "other",
+    "note": "hostile/malformed case - title too short, price and availability suspicious"
+  },
+  {
+    "input": {
+      "title": "The Art of War",
+      "price": "£9.99",
+      "description": "An ancient Chinese military treatise on strategy and tactics, still studied today in business and warfare alike.",
+      "availability": "In stock (40 available)"
+    },
+    "expected_category": "non_fiction"
+  }
+]

@@ -4,8 +4,10 @@ from sqlalchemy.orm import Session
 from db import get_db, engine, Base
 from models import Job
 from schemas import ChatRequest, JobCreatedResponse, JobStatusResponse
+from src.routes.enrich import router as enrich_router
 
 app = FastAPI(title="Sehat Sahara — Background Jobs (BE-06)")
+app.include_router(enrich_router)
 
 # For dev convenience. In real deployments, use Alembic migrations instead.
 Base.metadata.create_all(bind=engine)
